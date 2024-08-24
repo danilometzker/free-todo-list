@@ -1,6 +1,7 @@
 import React from "react";
 import { AppBody, Container } from "./styles";
 import AppHeader from "../AppHeader";
+import { NextSeo } from "next-seo";
 
 type ScreenProps = {
     title?: string;
@@ -9,11 +10,14 @@ type ScreenProps = {
 
 export default function AppScreen({ children, title }: ScreenProps) {
     return (
-        <Container>
-            <AppBody>
-                <AppHeader title={title} />
-                {children}
-            </AppBody>
-        </Container>
+        <>
+            <NextSeo title={title} />
+            <Container>
+                <AppBody>
+                    <AppHeader title={title} />
+                    {children}
+                </AppBody>
+            </Container>
+        </>
     );
 }
