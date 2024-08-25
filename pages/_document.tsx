@@ -3,7 +3,12 @@ import { Html, Head, Main, NextScript } from "next/document";
 export default function Document() {
     return (
         <Html>
-            <Head />
+            <Head>
+                <link
+                    rel="stylesheet"
+                    href="https://use.typekit.net/uoo6vfm.css"
+                />
+            </Head>
             <body>
                 <Main />
                 <NextScript />

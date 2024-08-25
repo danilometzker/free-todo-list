@@ -130,3 +130,7 @@ table {
 * {
     box-sizing: border-box;
 }
+
+body {
+    font-family: "deva-ideal", sans-serif;
+}

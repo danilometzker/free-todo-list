@@ -1,14 +1,35 @@
-import React from "react";
-import { AppHeaderContainer } from "./style";
+import React, { useEffect } from "react";
+import {
+    AppHeaderContainer,
+    AppHeaderNavigation,
+    AppHeaderTitle,
+    PressableIcon,
+} from "./style";
+import { RiArrowLeftSFill } from "react-icons/ri";
+import { useRouter } from "next/router";
+import Link from "next/link";
 
 type HeaderProps = {
     title?: string;
 };
 
 export default function AppHeader(header: HeaderProps) {
+    const router = useRouter();
+
+    const handleBack = () => {
+        router.back();
+    };
+
     return (
         <AppHeaderContainer>
-            <h1>{header.title}</h1>
+            <AppHeaderNavigation>
+                {router.pathname != "/" && (
+                    <PressableIcon onClick={handleBack}>
+                        <RiArrowLeftSFill size={32} color="#000" />
+                    </PressableIcon>
+                )}
+                <AppHeaderTitle>{header.title}</AppHeaderTitle>
+            </AppHeaderNavigation>
         </AppHeaderContainer>
     );
 }
