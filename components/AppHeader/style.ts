@@ -5,15 +5,19 @@ export const AppHeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     padding: 8px 16px;
-    background: linear-gradient(98.05deg, #0fff8c 0%, #45ffde 97.84%);
+    background: linear-gradient(
+        98.05deg,
+        rgba(255, 255, 255, 0.1) 0%,
+        rgba(255, 255, 255, 0.3) 97.84%
+    );
     border-radius: 16px 16px 0 0;
     height: 56px;
 `;
 
 export const AppHeaderTitle = styled.h1`
-    font-size: 18px;
+    font-size: 24px;
     font-weight: bold;
-    color: #000;
+    color: #fff;
     text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 `;
 
@@ -35,13 +39,13 @@ const appearAnimation = keyframes`
 export const PressableIcon = styled.div`
     width: 32px;
     height: 32px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
     transition: 0.2s;
     animation: ${appearAnimation} 0.2s linear;
     cursor: pointer;
 
     &:hover {
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(255, 255, 255, 0.5);
     }
 `;

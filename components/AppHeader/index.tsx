@@ -25,7 +25,7 @@ export default function AppHeader(header: HeaderProps) {
             <AppHeaderNavigation>
                 {router.pathname != "/" && (
                     <PressableIcon onClick={handleBack}>
-                        <RiArrowLeftSFill size={32} color="#000" />
+                        <RiArrowLeftSFill size={32} color="#fff" />
                     </PressableIcon>
                 )}
                 <AppHeaderTitle>{header.title}</AppHeaderTitle>
